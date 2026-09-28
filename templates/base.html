@@ -18,6 +18,21 @@
 {% for block in schema_blocks %}
 <script type="application/ld+json">{{ block }}</script>
 {% endfor %}
+<!-- Netlify Identity: catches invite/password-recovery links (which land on this
+     domain's root, not directly on /admin/) and pops the "set your password"
+     modal, then sends you into the CMS once you're logged in. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </head>
 <body>
 <div style="min-height:100vh; display:flex; flex-direction:column;" {% if accent %}data-accent{% endif %}>
