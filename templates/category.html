@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="page">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="{{ root }}/" class="navlink">Home</a>
+    <span>/</span>
+    <span class="current">{{ category_label }}</span>
+  </nav>
+
+  <h1 class="article-title">{{ category_label }}</h1>
+  <p class="article-subhead">{{ category_description }}</p>
+  <p style="font-size:13px; color:var(--muted); margin-top:6px;">{{ articles|length }} article{{ 's' if articles|length != 1 else '' }}</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px; margin-top:28px;">
+    {% for a in articles %}
+    <a href="{{ root }}/{{ a.slug }}/" style="display:flex; flex-direction:column; gap:6px; padding:18px 20px; border:1px solid var(--line-2); border-radius:12px; background:#FFFFFF;">
+      <span style="display:inline-flex; align-self:flex-start; font-size:10px; font-weight:700; letter-spacing:0.05em; color:{{ a.accent }}; background:{{ a.accent }}1A; padding:3px 9px; border-radius:100px;">{{ a.category }}</span>
+      <span style="font-family:'Fredoka', sans-serif; font-weight:600; font-size:16px; line-height:1.35;">{{ a.title }}</span>
+      <span style="font-size:13px; color:var(--muted); line-height:1.5;">{{ a.meta_description }}</span>
+    </a>
+    {% endfor %}
+  </div>
+
+  <div style="margin:48px 0 24px; padding:24px 28px; background:#F8F5EE; border-radius:14px; text-align:center;">
+    <p style="font-size:14px; color:var(--muted); margin:0;">Looking for something else? Browse the <a class="inlinelink" href="{{ root }}/library/">full library</a> or head to the <a class="inlinelink" href="{{ root }}/">homepage</a>.</p>
+  </div>
+</main>
+{% endblock %}

@@ -43,6 +43,14 @@ CATEGORY_SLUGS = {
     "resources": "Resources",
 }
 
+CATEGORY_DESCRIPTIONS = {
+    "dogs-and-puppies": "Names, behavior, and the everyday stuff of life with a dog.",
+    "food-and-treats": "DIY treats, recipes, and what's actually safe for your dog to eat.",
+    "daily-life": "Routines and essentials for every stage and situation.",
+    "diy-projects": "Toys, gear, and weekend builds you can make yourself.",
+    "resources": "Games and activities matched to your dog's energy and space.",
+}
+
 env = Environment(loader=FileSystemLoader(str(TEMPLATES)), autoescape=False)
 
 
@@ -85,7 +93,7 @@ def build_articles():
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{DOMAIN}/"},
                 {"@type": "ListItem", "position": 2, "name": a.get("category_label", ""),
-                 "item": f"{DOMAIN}/library/#{a.get('category_slug', '')}"},
+                 "item": f"{DOMAIN}/{a.get('category_slug', '')}/"},
                 {"@type": "ListItem", "position": 3, "name": a["title"], "item": canonical},
             ],
         }))
@@ -177,8 +185,50 @@ def build_simple_pages(articles):
         (out_dir / "index.html").write_text(html, encoding="utf-8")
 
 
+def build_category_pages(articles):
+    """One real collection page per nav category (e.g. /dogs-and-puppies/),
+    listing every article whose category_slug matches — generated straight
+    from article front matter, so it can't drift out of sync like a
+    hand-maintained page could."""
+    tmpl = env.get_template("category.html")
+    for slug, label in CATEGORY_SLUGS.items():
+        in_category = [a for a in articles if a.get("category_slug") == slug]
+        card_data = [
+            {
+                "slug": a["slug"],
+                "title": a["title"],
+                "category": a.get("category", ""),
+                "accent": CATEGORY_COLORS.get(a.get("category", ""), "#C1622D"),
+                "meta_description": a.get("meta_description", ""),
+            }
+            for a in in_category
+        ]
+        out_dir = OUTPUT / slug
+        out_dir.mkdir(parents=True, exist_ok=True)
+        canonical = f"{DOMAIN}/{slug}/"
+        schema_blocks = [json.dumps({
+            "@context": "https://schema.org", "@type": "CollectionPage",
+            "name": label, "url": canonical,
+        })]
+        html = tmpl.render(
+            root="",
+            title=f"{label} — Guides",
+            og_title=f"{label} — Cool People Have Dogs",
+            meta_description=f"Every {label} guide on Cool People Have Dogs, in one place.",
+            canonical=canonical,
+            schema_blocks=schema_blocks,
+            accent="#C1622D",
+            progress=0,
+            category_label=label,
+            category_description=CATEGORY_DESCRIPTIONS.get(slug, ""),
+            articles=card_data,
+        )
+        (out_dir / "index.html").write_text(html, encoding="utf-8")
+
+
 def build_sitemap(articles):
     urls = [f"{DOMAIN}/", f"{DOMAIN}/about/", f"{DOMAIN}/library/"]
+    urls += [f"{DOMAIN}/{slug}/" for slug in CATEGORY_SLUGS]
     urls += [f"{DOMAIN}/{a['slug']}/" for a in articles if not a.get("noindex")]
     xml = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -205,6 +255,7 @@ def main():
     articles = build_articles()
     copy_static()
     build_simple_pages(articles)
+    build_category_pages(articles)
     build_sitemap(articles)
     copy_admin()
     # Netlify convention: a 404.html at the site root is served automatically
