@@ -1,0 +1,90 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# After connecting this repo to Netlify, turn on "Netlify Identity" +
+# "Git Gateway" in the Netlify site settings — that's what lets you log
+# into /admin and edit without a GitHub account of your own.
+site_url: https://coolpeoplehavedogs.com
+display_url: https://coolpeoplehavedogs.com
+logo_url: /css/logo.svg
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subheading", name: "subhead", widget: "text" }
+      - { label: "Meta description (for Google)", name: "meta_description", widget: "text" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "LIFESTYLE"
+          - "ESSENTIALS"
+          - "GAMES"
+          - "DIY CRAFTS"
+          - "DIY TREATS"
+          - "GEAR"
+          - "BEHAVIOR"
+          - "DOG NAMES"
+          - "FOOD SAFETY"
+      - { label: "Category link label (breadcrumb)", name: "category_label", widget: "string" }
+      - label: "Category section (Library page anchor)"
+        name: "category_slug"
+        widget: "select"
+        options:
+          - "dogs-and-puppies"
+          - "food-and-treats"
+          - "daily-life"
+          - "diy-projects"
+          - "resources"
+      - { label: "Published date", name: "published_date", widget: "string" }
+      - { label: "Read time", name: "read_time", widget: "string", hint: "e.g. \"4 min read\"" }
+      - { label: "Hero photo", name: "hero_image", widget: "image", required: false }
+      - { label: "Hero photo alt text", name: "hero_alt", widget: "string", required: false }
+      - { label: "Hero placeholder caption (used if no photo yet)", name: "hero_caption", widget: "string", required: false }
+      - label: "FAQ"
+        name: "faq"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+      - label: "Downloadable file (PDF, printable, etc.)"
+        name: "download_file"
+        widget: "file"
+        required: false
+      - { label: "Article body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Site Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "meta_description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "About Page"
+        name: "about"
+        file: "content/pages/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "meta_description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Library Page"
+        name: "library"
+        file: "content/pages/library.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "meta_description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }

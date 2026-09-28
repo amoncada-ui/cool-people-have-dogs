@@ -1,0 +1,8 @@
+[build]
+  command = "pip install -r requirements.txt && python3 build.py"
+  publish = "output"
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
