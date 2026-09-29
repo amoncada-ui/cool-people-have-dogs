@@ -152,6 +152,10 @@ def copy_static():
         if (OUTPUT / "images").exists():
             shutil.rmtree(OUTPUT / "images")
         shutil.copytree(STATIC / "images", OUTPUT / "images")
+    if (STATIC / "downloads").exists():
+        if (OUTPUT / "downloads").exists():
+            shutil.rmtree(OUTPUT / "downloads")
+        shutil.copytree(STATIC / "downloads", OUTPUT / "downloads")
 
 
 def build_simple_pages(articles):
