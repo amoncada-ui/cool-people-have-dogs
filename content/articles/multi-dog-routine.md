@@ -89,11 +89,14 @@ read_next_html: '<a class="cphd-card" href="/9to5-routine/" style="display: bloc
             </span>
 <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 24px; line-height: 1.2; margin: 12px 0 0;">Grab the free multi-dog schedule.</h2>
 <p style="font-size: 14px; color: #4A443B; line-height: 1.6; margin: 12px 0 0; max-width: 420px;">A shared daily schedule for feeding, walks, and one-on-one time — plus new routine guides as they're published.</p>
-<form style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px; max-width: 340px;">
+<form method="POST" action="https://bae606a5.sibforms.com/serve/MUIFAEUOI0u5Qg23R6GinvCzn-_-Q2JeN0Sdf5Q0vf7w2zCbDqIApTFUmh-Su8ArRJm4bpjV1YcNNV98whShsPyy8NBAQR6Re30dpafp32C9CrPnt66z9jekdFUJ-y4W31yMjPUqDAMAdiE1Ajz735_lQNEhafOJJUBq2B1qNiWejk3KCwuc9cIvZTBqKP6rcch5riP-Q6aV3sBl1A==" target="_blank" style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px; max-width: 340px;">
 <label for="cphd-multidog-email" style="font-size: 13px; font-weight: 600; color: #322D25;">Your email address</label>
-<input id="cphd-multidog-email" placeholder="you@email.com" style="padding: 12px 16px; border-radius: 10px; border: 1px solid #D6CFBC; background: #FFFFFF; color: #221F1A; font-size: 14px; font-family: 'Public Sans', sans-serif; box-sizing: border-box;" type="email"/>
+<input id="cphd-multidog-email" placeholder="you@email.com" style="padding: 12px 16px; border-radius: 10px; border: 1px solid #D6CFBC; background: #FFFFFF; color: #221F1A; font-size: 14px; font-family: 'Public Sans', sans-serif; box-sizing: border-box;" name="EMAIL" required type="email"/>
 <button class="cphd-subbtn" style="padding: 13px 22px; border-radius: 10px; border: none; background: #221F1A; color: #FBF7F0; font-size: 14px; font-weight: 600; cursor: pointer;" type="submit">Get my free schedule</button>
 <span style="font-size: 12px; color: #8A8071;">Free PDF · fill-in-the-blank. Unsubscribe anytime.</span>
+<input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off"/>
+<input type="hidden" name="locale" value="en"/>
+<input type="hidden" name="html_type" value="simple"/>
 </form>
 </div>
 <div style="display: flex; align-items: center; justify-content: center;">

@@ -88,9 +88,12 @@ read_next_html: '<a class="cphd-card" href="/stare/" style="display: block; bord
             </span>
 <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 28px; line-height: 1.2; margin: 14px 0 0;">Grab the free Dog Body Language Cheat Sheet.</h2>
 <p style="font-size: 15px; color: #4A443B; line-height: 1.6; margin: 14px 0 0; max-width: 420px;">One printable page covering head tilts, ears, tail position, and eyes — a quick reference for what your dog's body is actually telling you.</p>
-<form style="margin-top: 22px; display: flex; gap: 10px; max-width: 400px;">
-<input placeholder="you@email.com" style="flex: 1; padding: 13px 16px; border-radius: 10px; border: 1px solid #D6B79E; background: #FFFFFF; color: #221F1A; font-size: 14px; font-family: 'Public Sans', sans-serif; box-sizing: border-box;" type="email"/>
+<form method="POST" action="https://bae606a5.sibforms.com/serve/MUIFAEUOI0u5Qg23R6GinvCzn-_-Q2JeN0Sdf5Q0vf7w2zCbDqIApTFUmh-Su8ArRJm4bpjV1YcNNV98whShsPyy8NBAQR6Re30dpafp32C9CrPnt66z9jekdFUJ-y4W31yMjPUqDAMAdiE1Ajz735_lQNEhafOJJUBq2B1qNiWejk3KCwuc9cIvZTBqKP6rcch5riP-Q6aV3sBl1A==" target="_blank" style="margin-top: 22px; display: flex; gap: 10px; max-width: 400px;">
+<input placeholder="you@email.com" style="flex: 1; padding: 13px 16px; border-radius: 10px; border: 1px solid #D6B79E; background: #FFFFFF; color: #221F1A; font-size: 14px; font-family: 'Public Sans', sans-serif; box-sizing: border-box;" name="EMAIL" required type="email"/>
 <button class="cphd-subbtn" style="padding: 13px 22px; border-radius: 10px; border: none; background: #221F1A; color: #FBF7F0; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap;" type="submit">Get the cheat sheet</button>
+<input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off"/>
+<input type="hidden" name="locale" value="en"/>
+<input type="hidden" name="html_type" value="simple"/>
 </form>
 <span style="display: block; font-size: 12px; color: #8A6E56; margin-top: 10px;">Free PDF · 1 page · print at home. Unsubscribe anytime.</span>
 </div>

@@ -315,11 +315,14 @@ template: page.html
             An emergency vet contact sheet
           </li>
 </ul>
-<form style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px; max-width: 380px;">
+<form method="POST" action="https://bae606a5.sibforms.com/serve/MUIFAEUOI0u5Qg23R6GinvCzn-_-Q2JeN0Sdf5Q0vf7w2zCbDqIApTFUmh-Su8ArRJm4bpjV1YcNNV98whShsPyy8NBAQR6Re30dpafp32C9CrPnt66z9jekdFUJ-y4W31yMjPUqDAMAdiE1Ajz735_lQNEhafOJJUBq2B1qNiWejk3KCwuc9cIvZTBqKP6rcch5riP-Q6aV3sBl1A==" target="_blank" style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px; max-width: 380px;">
 <label for="cphd-home-email" style="font-size: 13px; font-weight: 600; color: #322D25;">Your email address</label>
-<input id="cphd-home-email" placeholder="you@email.com" style="padding: 13px 16px; border-radius: 10px; border: 1px solid #D6CFBC; background: #FFFFFF; color: #221F1A; font-size: 15px; font-family: 'Public Sans', sans-serif; box-sizing: border-box;" type="email"/>
+<input id="cphd-home-email" placeholder="you@email.com" style="padding: 13px 16px; border-radius: 10px; border: 1px solid #D6CFBC; background: #FFFFFF; color: #221F1A; font-size: 15px; font-family: 'Public Sans', sans-serif; box-sizing: border-box;" name="EMAIL" required type="email"/>
 <button class="cphd-subbtn" style="padding: 14px 22px; border-radius: 10px; border: none; background: #221F1A; color: #FBF7F0; font-size: 15px; font-weight: 600; cursor: pointer;" type="submit">Get my free starter kit</button>
 <span style="font-size: 12px; color: #8A8071;">Free PDF · 3 pages · print at home. Unsubscribe anytime.</span>
+<input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off"/>
+<input type="hidden" name="locale" value="en"/>
+<input type="hidden" name="html_type" value="simple"/>
 </form>
 </div>
 <div style="display: flex; align-items: center; justify-content: center;">
