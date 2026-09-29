@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-cranberry-chicken-gummies.jpg
+hero_alt: A plate of heart-shaped cranberry chicken gummies
 hero_caption: a plate of heart-shaped cranberry chicken gummies
 faq:
 - question: Are these good for urinary health?

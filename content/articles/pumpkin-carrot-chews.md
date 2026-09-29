@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-pumpkin-carrot-chews.jpg
+hero_alt: A jar of pumpkin carrot chew strips
 hero_caption: a jar of pumpkin carrot chew strips
 faq:
 - question: Can I use a dehydrator instead of the oven?

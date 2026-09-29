@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 6 min read
+hero_image: /images/hero-kong-fillers.jpg
+hero_alt: A Kong toy stuffed and frozen with peanut butter
 hero_caption: a Kong toy stuffed and frozen with peanut butter
 faq:
 - question: How often can I give my dog a stuffed Kong?

@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-pb-banana-cups.jpg
+hero_alt: A tray of frozen peanut butter banana cups
 hero_caption: a tray of frozen peanut butter banana cups
 faq:
 - question: Can I use almond butter instead?

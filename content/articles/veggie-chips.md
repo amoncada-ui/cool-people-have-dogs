@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-veggie-chips.jpg
+hero_alt: Jars of dehydrated sweet potato and zucchini chips
 hero_caption: jars of dehydrated sweet potato and zucchini chips
 faq:
 - question: Are these low-calorie?

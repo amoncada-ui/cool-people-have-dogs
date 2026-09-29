@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-watermelon-mint-bites.jpg
+hero_alt: Frozen watermelon mint bone-shaped bites
 hero_caption: frozen watermelon mint bone-shaped bites
 faq:
 - question: Is mint safe for dogs?

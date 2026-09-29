@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-blueberry-paw-swirls.jpg
+hero_alt: Paw-shaped blueberry yogurt swirl treats
 hero_caption: paw-shaped blueberry yogurt swirl treats
 faq:
 - question: What can I use instead of yogurt if my dog is lactose intolerant?

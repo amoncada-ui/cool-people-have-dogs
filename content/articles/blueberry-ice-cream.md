@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-blueberry-ice-cream.jpg
+hero_alt: Scoops of purple blueberry dog ice cream
 hero_caption: scoops of purple blueberry dog ice cream
 faq:
 - question: Can I leave out the peanut butter?

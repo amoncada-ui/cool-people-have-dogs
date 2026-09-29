@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 29, 2026
 read_time: 4 min read
+hero_image: /images/hero-can-dogs-eat-blueberries.jpg
+hero_alt: A small pile of fresh blueberries next to a curious dog
 hero_caption: a small pile of fresh blueberries next to a curious dog
 faq:
 - question: How many blueberries can I give my dog?

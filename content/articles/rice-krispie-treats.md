@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-rice-krispie-treats.jpg
+hero_alt: Squares of dog-safe rice krispie treats
 hero_caption: squares of dog-safe rice krispie treats
 faq:
 - question: Can I make this without honey?

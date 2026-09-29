@@ -7,6 +7,8 @@ category_label: Food & Treats
 category_slug: food-and-treats
 published_date: Sept 27, 2026
 read_time: 4 min read
+hero_image: /images/hero-apple-carrot-bones.jpg
+hero_alt: A plate of apple carrot bone-shaped dog treats
 hero_caption: a plate of apple carrot bone-shaped dog treats
 faq:
 - question: Can I use a different flour?
