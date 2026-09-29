@@ -6,7 +6,7 @@ template: page.html
 <section style="width: 100%; max-width: 1120px; margin: 0 auto; padding: 56px 48px 0; box-sizing: border-box;">
 <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: stretch; margin-top: 36px;">
 <!-- Big featured article -->
-<a class="cphd-card" href="/" style="display: flex; flex-direction: column;">
+<a class="cphd-card" href="/can-dogs-eat-blueberries/" style="display: flex; flex-direction: column;">
 <div style="width: 100%; aspect-ratio: 16/11; border-radius: 18px; overflow: hidden; background: repeating-linear-gradient(135deg, #EFE7D8, #EFE7D8 12px, #E7DDCB 12px, #E7DDCB 24px); border: 1px solid #E4DCD0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
 <svg fill="none" height="36" stroke="#A69A85" stroke-width="1.5" viewbox="0 0 24 24" width="36"><rect height="16" rx="2" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" r="1.5"></circle><path d="M21 16l-5.5-5.5a1 1 0 0 0-1.4 0L6 19"></path></svg>
 <span style="font-size: 12px; color: #8A8071; font-style: italic;">[Featured photo]</span>
@@ -176,7 +176,7 @@ template: page.html
 <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 28px; margin: 0;">Most Saved on Pinterest</h2>
 </div>
 <div style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px; margin-top: 28px;">
-<a class="cphd-pin" href="#" style="display: block; border-radius: 16px; overflow: hidden; position: relative;">
+<a class="cphd-pin" href="/can-dogs-eat-blueberries/" style="display: block; border-radius: 16px; overflow: hidden; position: relative;">
 <div class="cphd-pin-img" style="width: 100%; aspect-ratio: 2/3; background: #EFE7D8;"></div>
 <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,18,14,0.75), rgba(20,18,14,0) 55%); display: flex; align-items: flex-end; padding: 16px;">
 <span style="color: #FBF7F0; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.25;">Can My Dog Eat Blueberries?</span>
